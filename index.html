@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テキストにスタイル設定</title>
+    <style>
+        /*CSS複数行かけるよ*/
+        h1 {
+            font-size: 2.5em;
+            font-family: cursive;
+            color: #FF0000;
+        }
+        h2 {
+            font-size: 2.0em;
+            font-family: fantasy;
+            color: rgb(0, 255, 255);
+        }
+        h3 {/*importantはタグ直書きより強い*/
+            font-size: 200%;
+            background-color: black;
+            color: white /*!important*/;
+        }
+        p {
+            font-size: 1.2em;
+            font-family: sans-serif;
+            color: blue;
+        }
+        span {
+            font: bold italic 1.7em serif;
+            background-color: magenta;
+            color: white;
+        }
+        #name {
+            color: black;
+        }
+        h4 {
+            background-color: black;
+        }
+        .shiro {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello!こんにちは!</h1>
+    <h1 id="name">ABCDEHG</h1>
+    <h2>Hello!Akaishi</h2>
+    <p>This is <span>sampl</span> content</p>
+    <!--白文字、黒背景で200%-->
+    <h3>Hello!!</h3>
+    <h3 style="color: #00ff00; font-size: 300%;">からす</h3>
+    <h4>1</h4>
+    <h4 class="shiro">2</h4>
+    <h4 class="shiro">3</h4>
+    <h4 class="shiro">4</h4>
+</body>
+
+</html>
