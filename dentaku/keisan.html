@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易電卓</title>
+    <style>
+        #kigo {
+            width: 50px;
+        }
+    </style>
+    <script>
+        function pushButton() {
+            // 左の数字
+            let num1 = document.getElementById("num1").value;
+            // 左の数字を数値に変換（左が変換したい文字、右が進数）
+            num1 = parseInt(num1, 10);
+            // 右の数字
+            let num2 = document.getElementById("num2").value;
+            // 右の数字を数値に変換
+            num2 = parseInt(num2, 10);
+            // 記号を取得（+ - / *）
+            let kigo = document.getElementById("kigo").value;
+
+            // 結果表示用
+            let result = 0;
+           
+            if (kigo == "+") {
+                result = num1 + num2;
+            } else if (kigo == "-") {
+                result = num1 - num2;
+            } else if (kigo == "*") {
+                result = num1 * num2;
+            } else if (kigo == "/") {
+                result = num1 / num2;
+            }
+
+
+            // 結果の表示
+            document.getElementById("result").value = result;
+        }
+    </script>
+</head>
+
+<body>
+    <input id="num1" type="text">
+    <input id="kigo" type="text">
+    <input id="num2" type="text">
+    <button onclick="pushButton()">＝</button>
+    <input id="result" type="text">
+</body>
+
+</html>
